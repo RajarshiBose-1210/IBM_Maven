@@ -5,20 +5,23 @@ agent any
 stages{
 stage('Check Stage'){
 steps{
-
+withMaven(maven : 'MVN'){
 bat 'mvn --version'
+}
 }
 }
 stage('Compile Stage'){
 steps{
-
+withMaven(maven : 'MVN'){
 bat 'mvn clean compile'
+}
 }
 }
 stage('Test Stage'){
 steps{
-
+withMaven(maven : 'MVN'){
 bat 'mvn test'
+}
 }
 }
 }
