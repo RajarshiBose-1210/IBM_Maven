@@ -59,6 +59,10 @@ public void statement()
 	for(int i=0;i<idx;i++)
 		System.out.println(txn);;
 }
+public void st()
+{
+	System.out.println("How are you");
+}
 
 
 
