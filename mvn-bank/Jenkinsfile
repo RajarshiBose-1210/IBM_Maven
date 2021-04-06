@@ -13,14 +13,14 @@ bat 'mvn --version'
 stage('Compile Stage'){
 steps{
 withMaven(maven : 'MVN'){
-bat 'mvn -f mvn-bank/pom.xml clean compile'
+bat 'mvn -f mvn-bank/pom.xml compile'
 }
 }
 }
 stage('Test Stage'){
 steps{
 withMaven(maven : 'MVN'){
-bat 'mvn -f mvn-bank/pom.xml test'
+bat 'mvn -f mvn-bank/pom.xml install'
 }
 }
 }
